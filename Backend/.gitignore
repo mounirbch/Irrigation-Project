@@ -29,13 +29,10 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-docker-compose.yml
 
-src/main/resources/application.properties
 
 ### VS Code ###
 .vscode/
-Backend/src/main/resources/application.properties
 
 
 
