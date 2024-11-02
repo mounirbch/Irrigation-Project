@@ -1,0 +1,61 @@
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center; 
+    padding-top: 100px; 
+   
+  }
+  .right-panel form .form-group {
+    margin-bottom: 20px; 
+  }
+  
+ 
+  .right-panel form button {
+    margin-right: 10px; 
+    margin-left: 60px;
+    margin-top: 40px;
+  }
+  .right-panel form .form-group label {
+    margin-bottom: 7px; 
+    display: block; 
+  }
+
+  .sensor-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sensor-item {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .sensor-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sensor-name {
+    font-weight: bold;
+  }
+  
+  .sensor-quantity {
+    font-style: italic;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 80px; 
+  }
+
+  .sensor-list {
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center; 
+    padding-top: 60px; 
+  }
+  
+  
+  
+  

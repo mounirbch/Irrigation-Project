@@ -1,0 +1,12 @@
+<div *ngIf="(user$ | async) as user">
+  <div *ngIf="!user"> <!-- Si l'utilisateur est null (non connecté), affiche le bouton Login With Google -->
+    <button (click)="onSignOutClick()">Login With Google</button>
+  </div>
+  <div *ngIf="user"> <!-- Si l'utilisateur n'est pas null (connecté), affiche les informations de l'utilisateur et le bouton SignOut -->
+    {{ user | json }}
+    <hr>
+    <button (click)="onSignInClick()">SignOut</button>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

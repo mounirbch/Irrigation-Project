@@ -1,0 +1,31 @@
+.app-container{
+    margin-top: 30px;
+    width: 100%;/*ce 2 ligne occupe 100% d'espace disponible de body*/ 
+    height: 100%;
+    background-color: #d6dad6;/*on peux efface ou rendre blanc #ffffff*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather-container{
+    height: 99%;/*85vh*/  /* ce 2 codes occupe 90% de espace d'interface weather*/
+    width: 99%;/*65vw*/
+    background-color: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.left-container{
+    flex: 1;/*3*/
+    background-color: #ffffff;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+}
+.right-container{
+    flex: 2;/*7*/
+    background-color: #f6f6f8;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}

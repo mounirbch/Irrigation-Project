@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 left-half"> <!-- Moitié gauche -->
+      <input type="month" [(ngModel)]="dateObj.date" class="form-control">
+      <button (click)="fetchData()" class="btn btn-primary mt-2">Changer le mois</button>
+      <canvas id="myChart" class="canvas-chart" width="300" height="250"></canvas>
+      <p *ngIf="user" class="mt-2">{{ user }}</p>
+    </div>
+    <div class="col-md-6 right-half"> <!-- Moitié droite -->
+      <div class="row">
+        <div class="col-12 col-md-6 mb-3">
+          <canvas id="chartUtilisateursActifs" class="canvas-chart"></canvas>
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+          <canvas id="chartUtilisateursArchives" class="canvas-chart"></canvas>
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+          <canvas id="chartUtilisateursGoogle" class="canvas-chart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

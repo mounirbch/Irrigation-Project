@@ -1,0 +1,26 @@
+<div id="calendar-container">
+    <div id="cal-buttons">
+        <div id="cal-date-nav-buttons">
+            <button id="previous" mwlCalendarPreviousView [(viewDate)]="viewDate" [view]="view">Précedent</button>
+            <button id="today" mwlCalendarToday [(viewDate)]="viewDate">Aujourd'hui</button>
+            <button id="next" mwlCalendarNextView [(viewDate)]="viewDate" [view]="view">Prochain</button>
+        </div>
+        <div id="cal-date-field">{{viewDate | calendarDate:(view + 'ViewTitle'): 'en' }}</div> <!--fr-->
+        <div id="cal-view-nav-buttons">
+            <button id="month"(click)="setView(CalendarView.Month)">Mois</button>
+            <button id="week" (click)="setView(CalendarView.Week)">Semaine</button>
+            <button id="day" (click)="setView(CalendarView.Day)">Jour</button>
+        </div>
+    </div>
+
+    <span [ngSwitch]="view">
+        <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events" [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)" (eventClicked)="showEventDetails($event)" locale="fr"></mwl-calendar-month-view>
+        <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate" [events]="events" (eventClicked)="showEventDetails($event)" locale="en">
+         
+        </mwl-calendar-week-view>
+        
+        
+        <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day" [viewDate]="viewDate" [events]="events" (eventClicked)="showEventDetails($event)" locale="en"></mwl-calendar-day-view>   
+    </span>
+    
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><i class="fa-solid fa-user"></i></title>
+</head>
+<body>
+    <h1>Importation d'une image</h1>
+    <div>
+        <textarea type="text" class="form-control" [(ngModel)]="qr"  name="qr"></textarea>
+    </div>
+    <div>
+        <qr-code [value]="qr"></qr-code> <!-- Utilisation de la propriété qr -->
+    </div>
+
+    <i class="fa-solid fa-user">name</i>
+    <h6>ALL DATA</h6>
+    <table>
+        <thead class="thead-dark" >
+            <th>id</th>
+            <th>name</th>
+            <th>username</th>
+            <th>email</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userList">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

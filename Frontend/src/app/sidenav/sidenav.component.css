@@ -1,0 +1,202 @@
+ .green-bar {
+    background-color: #32CD32;
+    height: 46px; 
+    width: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .green-bar .aa {
+    display: flex;
+    align-items: center;
+}
+
+.green-bar .aa:hover i,
+.green-bar .aa:hover .text-right {
+    color: #28a928;
+    cursor: default;
+}
+
+
+.green-bar .aa i {
+    margin-right: 8px; 
+}
+
+  
+  
+  .text-right {
+    margin-right: 40px; 
+    color: white;
+    font-size: 26px;
+}
+.fa-user {
+    margin-left: 40px; 
+    color: white;
+    font-size: 20px;
+}
+.fa-bell {
+    margin-left: 10px; 
+    color: white;
+    font-size: 20px;
+}
+.fa-bell {
+    margin-left: 30px; 
+    color: white;
+    font-size: 20px;
+}
+.sidenav {
+    background-color: #32CD32;
+    transition: all .5s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+   
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    padding: 0.938rem 0.938rem 0 0.938rem;
+    width: 100%;
+
+    .logo{
+        text-align: center;
+        width: 4rem; 
+        height: 4rem; 
+        border-radius: 50%;
+        width: 4rem; 
+        height: 4rem; 
+        border-radius: 50%;
+        padding: 0.313rem;
+        font-size: 20px;
+        font-size: 20px;
+        font-weight: 900;
+        cursor: pointer;
+        border: none;
+        top: 3rem; /* Décalage vers le haut */
+    left: 2rem;
+    }
+
+    .logo-text{
+        margin-left: 0.5rem;
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .btn-close{
+        margin-left: auto;
+        cursor: pointer;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: transparent;
+        border: none;
+
+        .fa-times{
+            color: #fff;
+            font-size: 24px;
+        }
+    }
+}
+.sidenav-collapsed{
+    width: 16.5625rem;
+}
+.sidenav-nav{
+    list-style: none;
+    padding: 0.938rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 3.65rem);
+    cursor: pointer;
+
+    .sidenav-nav-item{
+        width: 100%;
+        margin-bottom: 0.625rem;
+
+        .sidenav-nav-link{
+            display: flex;
+            align-items: center;
+            height: 3rem;
+            color: #f3f3f3;
+            text-decoration: none;
+            border-radius: 0.625rem;
+            transition: all .3s ease;
+
+            .sidenav-link-icon{
+                font-size: 22px;
+                width: 2rem;
+                min-width: 2rem;
+                margin: 0 0.5rem;
+                text-align: center;
+            }
+
+            .sidenav-link-text{
+                margin-left: 1.5rem;
+            }
+        }
+    }
+    .sidenav-nav-item:hover{
+       .sidenav-nav-link{
+        background-color: #fff;
+        color: #000;
+       } 
+    }
+
+
+    .sidenav-nav-item1{
+        width: 100%;
+        margin-bottom: 0.625rem;
+        margin-top: 220px;
+
+        .sidenav-nav-link1{
+            display: flex;
+            align-items: center;
+            height: 3rem;
+            color: #f3f3f3;
+            text-decoration: none;
+            border-radius: 0.625rem;
+            transition: all .3s ease;
+
+            .logout-icon{
+                font-size: 22px;
+                width: 2rem;
+                min-width: 2rem;
+                margin: 0 0.5rem;
+                text-align: center;
+
+
+            }
+
+            .sidenav-link-text-logout{
+                margin-left: 1.5rem;
+                
+            }
+        }
+    }
+    .sidenav-nav-item1:hover{
+        .sidenav-nav-link1{
+         background-color: #fff;
+         color: #000;
+        } 
+     }
+
+}
+.active{
+    background-color: #fff;
+
+    .sidenav-link-icon,
+    .sidenav-link-text,
+    .logout-icon,
+    .sidenav-link-text-logout
+    {
+        color: #000;
+    }
+}

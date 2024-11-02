@@ -1,0 +1,31 @@
+<div class="inscription-form">
+    <h2>Vos informations personnelles</h2>
+    <div class="profile-image-container">
+    <img [src]=retrievedImage class="profile-image" ></div>
+    <input type="file" (change)="onFileChanged($event)">
+    <div *ngIf="changer" class="message">{{ message}}</div>
+    <button (click)="onUpload()">Enregistrer photo</button>
+   
+
+   
+
+    
+    <form>
+        <label>
+            E-mail:
+            <input type="email" name="your-email" [value]="donnee.email" readonly required>
+        </label>
+       
+        <label>
+           Adresse:
+            <input type="adresse" name="your-adress" [value]="donnee.adresse" [(ngModel)]="ProfilObj.adresse" required>
+        </label>
+        <label>
+            Votre Numéro de téléphone:
+             <input type="tel" name="your-tel" [value]="donnee.telephone" [(ngModel)]="ProfilObj.telephone" required>
+        </label>
+        <br>
+        <div *ngIf="changer1" class="message">{{ messageModifierDonnee }}</div>
+        <button type="submit" (click)="modifierProfil()">Modifier</button> 
+    </form>
+</div>

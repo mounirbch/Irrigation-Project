@@ -1,0 +1,33 @@
+<div class="left-container">
+    <div class="left-container-nav-bar">
+        <div class="search-icon" (click)="onSearch(location.value)"><i class="fas fa-search"></i></div>
+        <div class="search-input"><input type="text" placeholder="search for places ..." #location (keyup.Enter)="onSearch(location.value)"></div>
+        <div class="location-icon" (click)="onSearch(location.value)"><i class="fas fa-times"></i></div>
+    </div>
+    <div class="left-container-data-box">
+        <div class="left-container-temp-data">
+            <div class="left-container-temp-img"><img src={{this.weatherService.temperatureDtata.summaryImage}} alt="summaryImage"></div>
+            <div class="left-container-temp-value">{{this.weatherService.celcius == true ? this.weatherService.temperatureDtata.temperature : this.weatherService.celsiusToFahrenheit(this.weatherService.temperatureDtata.temperature)}}<sup>{{this.weatherService.celcius == true ? "°C" : "°F" }}</sup></div>
+            <div class="left-container-day-time">{{this.weatherService.temperatureDtata.day }},<span> {{this.weatherService.temperatureDtata.time}}</span></div>
+        </div>
+
+
+        <div class="dividing-line"></div><!--just un simple ligne between to phase mais ma5edmetesh 3andi lezem nshouf chatgpt-->
+        
+        
+        <div class="left-container-other-details">
+            <div class="left-container-temp-summary">
+                <div class="left-container-temp-summary-phrase-img"><i class="far fa-cloud"></i></div>
+                <div class="left-container-temp-summary-value">{{this.weatherService.temperatureDtata.summaryPhrase}}</div>
+            </div>
+            <div class="left-container-rain-stats">
+                <div class="left-container-rain-stats-img"><i class="far fa-cloud-rain"></i></div>
+                <div class="left-container-rain-stats-value">Rain - {{this.weatherService.temperatureDtata.rainPercent}}</div>
+            </div>
+            <!--<div class="left-container-location-details">
+                <div class="left-container-location-img"><img src="./../../assets/taj-mahal13 (1).png" alt=""></div>
+                <div class="left-container-location-name">{{this.weatherService.temperatureDtata.location}}</div>
+            </div>-->
+        </div>
+    </div>
+</div>

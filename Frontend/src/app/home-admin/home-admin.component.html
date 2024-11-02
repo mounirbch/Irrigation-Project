@@ -1,0 +1,77 @@
+<div *ngIf="!archive">
+<div  class="title-bar">
+  <h1 class="title">Liste des utilisateurs</h1>
+  <button class="usersArchv" (click)="fetchUsersArchive()">Les utilisateurs archivé(e)s</button>
+  
+</div>
+<div style="margin-top: 20px;"></div>
+<table>
+  <thead>
+    <tr>
+      <th  class="green-background white-text">Nom</th>
+      <th  class="green-background white-text">Email</th>
+      <th  class="green-background white-text">Activation</th>
+      <th  class="green-background white-text">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let utilisateur of utilisateurs">
+
+   
+      <td>
+        <img [src]="utilisateur.image" alt="Photo de profil1" style="width: 50px; height: 50px; border-radius: 50%;">
+        {{ utilisateur.nom }}
+      </td>
+      
+      <td>{{ utilisateur.email }}</td>
+      <td>{{ utilisateur.connecte }}</td>
+      <td>
+        <button class="btn btn-primary" (click)="openModel(utilisateur.email)" >consulter</button>
+        
+        <button class="btn btn-danger" (click)="AreySure(utilisateur.email)">Archiver</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<div *ngIf="archive">
+  <div  class="title-bar">
+    <h1 class="title">Liste des utilisateurs archivé(e)s</h1>
+    <button class="usersArchv" (click)="fetchUsers()">Revenir</button>
+    
+  </div>
+  <div style="margin-top: 20px;"></div>
+  <table>
+    <thead>
+      <tr>
+        <th  class="green-background white-text">Nom</th>
+        <th  class="green-background white-text">Email</th>
+        <th  class="green-background white-text">Activation</th>
+        <th  class="green-background white-text">Action</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let utilisateur of utilisateurs1">
+  
+     
+        <td>
+          <img [src]="utilisateur.image" alt="Photo de profil" style="width: 50px; height: 50px; border-radius: 50%;">
+          {{ utilisateur.nom }}
+        </td>
+        
+        <td>{{ utilisateur.email }}</td>
+        <td>{{ utilisateur.connecte }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="openModel(utilisateur.email)" >consulter</button>
+          
+          <button class="btn btn-danger" (click)="AreySure1(utilisateur.email)">Desarchiver</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

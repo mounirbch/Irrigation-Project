@@ -1,0 +1,185 @@
+.inscription-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inscription-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #090909;
+  }
+  
+  .inscription-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #000000;
+  }
+  
+  .inscription-form input[type="text"],
+  .inscription-form input[type="email"],
+  .inscription-form input[type="tel"],
+  .inscription-form input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 1px solid #32CD32;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .inscription-form input[type="text"]:focus,
+  .inscription-form input[type="email"]:focus,
+  .inscription-form input[type="tel"]:focus,
+  .inscription-form input[type="password"]:focus {
+    outline: none;
+    border-color: #28a928;
+  }
+  
+  .inscription-form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #32CD32;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .inscription-form button:hover {
+    background-color: #28a928;
+  }
+  
+input[type=datetime-local] {
+    
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .message-success {
+    
+    color: 	#809c13;
+    
+  }
+  .green-bar {
+    background-color: green;
+    height: 20px;
+    width: 100%;
+  }
+  .parent {
+    display: grid;
+    width: 1270px; /* Largeur de 1170 pixels */
+    height: 672px; /* Hauteur de 672 pixels */
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+  }
+  
+    
+    .div1 { grid-area: 1 / 1 / 6 / 4; }
+  
+      .div2 { grid-area: 1 / 4 / 6 / 7; }
+      .div1, .div2 {
+        padding: 20px;
+        border-radius: 8px;
+       
+        
+    }
+    
+    .evenements-container {
+      max-height: 200px; 
+      overflow-y: auto; 
+      border: 1px solid #ccc; 
+      padding: 10px; 
+  }
+  
+  .evenement {
+      margin-bottom: 10px; 
+      padding: 15px;
+      background-color: #f9f9f9; 
+      border: 1px solid #ddd; 
+      display: flex; 
+      align-items: center; 
+      padding: 10px;
+      border-bottom: 1px solid #ccc; 
+  }
+  
+  
+  .evenement-title {
+    flex: 1; 
+    font-weight: bold;
+    color:blue; 
+  }
+  
+  .evenement-dates {
+    text-align: right; 
+  }
+  
+ 
+  .green-background {
+    background-color: #32CD32;
+    color: white; 
+    padding: 5px; 
+}
+.div1.inscription-form {
+  width: 50%; 
+}
+
+.div2.inscription-form {
+  width: 50%; 
+}
+
+
+
+.inscription-form {
+  max-width: 5000px;
+  max-height: 600px;
+  width: 100%; 
+  margin: 0 auto;
+  padding: 30px; 
+  margin-bottom: 20px; 
+  height: 800px; 
+  overflow-y: auto; 
+  margin-left: 50px;
+  margin-right: 100px;
+  
+}
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.div1, .div2 {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+@media (min-width: 768px) {
+  .div1, .div2 {
+      flex: 1;
+  }
+}
+
+
+
+
+
+
+

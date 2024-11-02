@@ -1,0 +1,31 @@
+<div class="inscription-form">
+    <span class="details-event-close-button" (click)="closeDialog()">&times;</span>
+    <br>
+
+    <h2>Plus des détails sur cet agriculteur</h2>
+
+    <div class="profile-image-container">
+    <img [src]=retrievedImage class="profile-image" ></div>
+   
+   
+
+   
+
+    
+    <form>
+        <label>
+            E-mail:
+            <input type="email" name="your-email" [value]="donnee.email" readonly required>
+        </label>
+      
+        <label>
+           Adresse:
+            <input type="adresse" name="your-adress" [value]="donnee.adresse"readonly  required>
+        </label>
+        <label>
+            Votre Numéro de téléphone:
+             <input type="tel" name="your-tel" [value]="donnee.telephone" readonly required>
+        </label>
+        <br>
+    </form>
+</div>

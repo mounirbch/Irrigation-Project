@@ -1,0 +1,66 @@
+<div class="parent">
+    <div class="div1 inscription-form-container"> 
+<div class="inscription-form">
+    <h2>Ajouter un événement </h2>
+    <form > 
+       
+        <br>
+        <label>
+            Titre d'évenement:
+            <input type="text" name="your-lname" [(ngModel)]="evenementObj.title"  required><!--[(ngModel)]="formData.lastName"-->
+        </label>
+        <br>
+        <label>
+            Début de l'évenement:
+            <input type="datetime-local" name="your-email" [(ngModel)]="evenementObj.start"   required><!--[(ngModel)]="formData.email"-->
+        </label>
+        <br>
+      
+        <br>
+        <label>
+            Fin de l'évenement:
+            <input  type="datetime-local"  name="your-password"   [(ngModel)]="evenementObj.end"  required><!--[(ngModel)]="formData.password"-->
+        </label>
+        <div *ngIf="message4" class="message-success">{{ message4 }}</div>
+        
+        <br>
+        <button type="submit" (click)="AjouterEvent()">Ajouter</button>
+    </form>
+</div>
+</div>
+
+
+    <div class="div2"> <div class="inscription-form">
+        <h2>listes des événements à venir</h2>
+        <form > 
+         <label>
+            <span style="color: blue; font-weight: bold;">Préciser un intervalle du temps</span>
+            <br>
+               Début
+                <input type="datetime-local" name="your-email" [value]="evenementObjChoix.start" [(ngModel)]="evenementObjChoix.start"   required><!--[(ngModel)]="formData.email"-->
+            </label>
+           
+          
+            <label>
+                Fin :
+                <input  type="datetime-local"  name="your-password"   [(ngModel)]="evenementObjChoix.end"  ><!--[(ngModel)]="formData.password"-->
+            </label>
+            <button type="submit" (click)="fetchEventsByInterval()">Afficher</button>
+
+            
+           
+        </form>
+   
+        <div class="evenements-container">
+            <div *ngFor="let event of events" class="evenement">
+              <div class="evenement-title">{{ event.title }}</div>
+              <div class="evenement-dates ">
+                <span><span class="green-background">Start</span>: {{ event.start | date:'medium'  }}</span>
+                <br><br>
+                <span><span class="green-background">Fin</span>: {{ event.end | date:'medium'  }}</span>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+    </div>

@@ -1,0 +1,43 @@
+#cal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; 
+  }
+  
+  button {
+    background-color: #32CD32;
+    color: white;
+    border: none;
+    padding: 8px 15px; 
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400; 
+  }
+  
+  button:hover {
+    background-color: #3EB489; 
+  }
+  
+  #cal-date-nav-buttons,
+  #cal-view-nav-buttons {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+  }
+  
+  #cal-date-field {
+    font-size: 16px; 
+    margin-bottom: 10px;
+  }
+  
+  
+@media screen and (max-width: 768px) {
+  #cal-buttons {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #cal-view-nav-buttons {
+      margin-top: 10px; 
+  }
+}

@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Liste de matériel</h2>
+        <ul class="sensor-list">
+          <li *ngFor="let capteur of capteurs" class="sensor-item">
+            <div class="sensor-info">
+              <span class="sensor-name">{{ capteur.sensor }}</span>   #lahne tehot les donner haseb api mte3ek eli besh ta3melha ta ta3tika affichage correcte
+              <span class="sensor-quantity">{{ capteur.quantity }}</span>  #lahne kifkif
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <div class="right-panel">
+          <h2>Gérer de matériel</h2>
+          <form>
+            <div class="form-group mb-3">
+              <label for="sensor">Capteur:</label>
+              <select id="sensor" name="sensor" class="form-control" >
+                <option value="temperature">temperature</option>
+                <option value="Humidité">Humidité</option>
+                <option value="Humidité de sol">Humidité de sol</option>
+                <option value="ph">ph</option>
+              </select>
+            </div>
+            <div class="form-group mb-3">
+              <label for="quantity">Nombre:</label>
+              <input type="number" id="quantity" name="quantity" class="form-control" min="0" >
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Archiver</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

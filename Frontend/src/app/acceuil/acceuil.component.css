@@ -1,0 +1,63 @@
+.fullscreen-bg {
+    width: 100%;
+     /* Pour conserver les proportions de l'image */
+     /* Pour corriger certains comportements liés à la taille de l'image */
+    /* Pour étirer l'image tout en conservant ses proportions */
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: gray;
+    
+    }
+    
+    .content {
+        position: relative;
+    }
+    
+
+
+  
+.mounir{
+    margin-left:1px;
+}
+.mounir1{
+    margin-left: 200px;
+}
+h1 {
+    font-size: 24px; /* ajustez la taille selon vos besoins */
+    background-color: antiquewhite;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+th {
+    border: 1px solid black;
+    padding: 8px;
+    background-color:gray;
+    font-size: 35px;
+    
+}
+td{ border: 1px solid black;
+    padding: 8px;
+    font-size: 30px;
+    text-align: center;
+    background-color:#CDFADB;
+    
+
+}
+.ok{
+    background-color:#CDFADB
+    ;
+}
+.grand-espace {
+    margin-right: 10px; /* Ajoute un espace de 50 pixels à droite du texte */
+}
+.abk{
+    font-size: 10px;
+}
+

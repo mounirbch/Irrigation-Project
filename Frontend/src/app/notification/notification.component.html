@@ -1,0 +1,7 @@
+<div>
+<ul>
+  <li *ngFor="let notification of notifications" class="notification">
+    {{ notification.message }} - {{ notification.dateNotif | date: 'medium' }}
+  </li>
+</ul>
+</div>

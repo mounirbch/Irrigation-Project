@@ -1,0 +1,25 @@
+.container-fluid {
+  height: 100vh;
+}
+
+.canvas-chart {
+  width: 100% !important;
+  height: auto !important;
+}
+
+#chartUtilisateursGoogle {
+  width: 100% !important;
+  height: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1000px) {
+  .left-half, .right-half {
+    flex: 1 1 100%;
+  }
+
+  #chartUtilisateursGoogle {
+    margin-left: 0 !important;
+  }
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- source :GOOGLE font //redressed -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+
+	
+
+		<title>Projet formation</title>
+	</head>
+	<body>
+		<nav class="cc-navbar navbar navbar-expand-lg navbar-dark position-fixed w-100">			
+			<div class="container-fluid">
+				<img src="../../assets/logo123.jpg" alt="Logo" style="margin-top: -15px; margin-left: -5px;" class="logo">
+
+			  <a class="navbar-brand text-uppercase mx-4 py-3 fw-bolder" href="#">Irrigation Intelligente</a>
+			  <button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+				(click)="toggleNavbar()"
+			  >
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent" #navbarSupportedContent>
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				  <li class="nav-item pe-4">
+					<a class="nav-link active" aria-current="page" href="#" (click)="toAcceuil()" routerLink="/Acceuil" >Accueil</a>
+				  </li>
+				  <li class="nav-item pe-4">
+					<a class="nav-link" (click)="toAPropos()" routerLink="/APropos" >A propos</a>
+				  </li>
+				  <li class="nav-item pe-4">
+					<a class="nav-link" (click)="toStat()" routerLink="/APropos">Nos Statistiques</a>
+				  </li>
+				  <li class="nav-item pe-4">
+					<button class="btn btn-order rounded-0" href="#" (click)="openModel()">Se Connecter</button>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+		  
+		<section id ="acceuil" class="banner d-flex justify-content-center align-items-center pt-5">
+			<div class="container my-5 py-5">
+				<div class="row">
+					<div class="col-md-6"></div>
+					<div class="col-md-6 banner-desc lh-lg">
+						<h1 class="text-capitalize py-4 redressed">
+							Fournir une solution <br><br>technologique pour <br><br>
+							la gestion efficace d'irrigation
+						</h1>
+						<p>
+							<button class="btn btn-dark btn-lg me-5 mx-4 rounded-0 merriweather" (click)="toContact()">Contactez Nous</button>
+							
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="APropos" class="available merriweather py-5">
+			<div class="container">
+				<div class="row">
+					<div class="card mb-3 border-0 rounded-0">
+						<div class="row">
+							<div class="col-md-6">
+								<img src="../../assets/images/irrigation.jpg" class="img-fluid" alt="..." />
+							</div>
+							<div class="col-md-6">
+								<div class="card-body px-0">
+									<h3 class="card-title color">Contrôle automatisé</h3>
+									<p class="card-text ">
+										La capacité de programmer des horaires d'irrigation automatique en fonction des données météorologiques actuelles et prévues.
+									</p>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-3 border-0 rounded-0">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="card-body px-0">
+								<h3 class="card-title color">Surveillance en temps réel</h3>
+								<p class="card-text ">
+									Des capteurs intégrés permettent de surveiller en temps réel une variété de paramètres cruciaux pour une gestion efficace de l'irrigation. Ces capteurs mesurent notamment l'humidité du sol, les conditions météorologiques.... En outre, ils peuvent également recueillir des données sur la température, l'humidité, et d'autres variables pertinentes, fournissant ainsi une vue d'ensemble complète pour optimiser l'arrosage et assurer une utilisation efficace des ressources en eau.								</p>
+								
+							</div>
+						</div>
+					<div class="col-md-6">
+					<img src="../../assets/images/Des capteurs.jpg" class="img-fluid" alt="..." />
+					  </div>
+					  </div>
+					  </div>
+				
+					
+				<div class="row">
+					<div class="card mb-3 border-0 rounded-0">
+						<div class="row">
+							<div class="col-md-6">
+								<img src="../../assets/images/ML.jpg" class="img-fluid" alt="..." />
+							</div>
+							<div class="col-md-6">
+								<div class="card-body px-0">
+									<h3 class="card-title color">Analyse des données</h3>
+									<p class="card-text monParagraph ">
+										Mettre en évidence les informations historiques (temérature,humidité..) et en se basant sur les pratiques d'irrigation passées
+										et l'état du plante, notre plateforme génere des prédictions sur les besoins en eau futurs. <br>
+										Cette approche prédictive permet non seulement d'optimiser les schémas d'irrigation pour minimiser le gaspillage d'eau, mais 
+										aussi d'améliorer les rendements agricoles en fournissant une irrigation juste à temps
+									
+							
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="Stat" class="cc-menu merriweather py-5">
+			<div class="container">
+				
+					
+				<div class="row row-cols-1 row-cols-md-2  g-4">
+					<div [ngClass]="{'mak': isSmallScreen}">
+					<div class="col   ">
+						<div class="card">
+							<img src="../../assets/images/eau.jpg"  hight class="card-img-top custom-image1" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title color">Economisez l'eau</h5>
+								<p class="card-text">
+									le système peut ajuster précisément les schémas d'irrigation en fonction des conditions météorologiques actuelles et prévues, ainsi que des besoins spécifiques des cultures. Cela permet une utilisation plus efficace de l'eau, en évitant l'irrigation excessive et en minimisant le gaspillage d'eau.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div [ngClass]="{'man': isSmallScreen}">
+					<div class="col   ">
+						<div class="card">
+							<img src="../../assets/images/dollars1.png" class="card-img-top custom-image1" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title color">Economisez l'argent</h5>
+								<p class="card-text">
+									En économisant de l'eau grâce à une irrigation plus précise et ciblée, les utilisateurs peuvent réaliser des économies significatives sur leurs factures d'eau. Moins d'eau utilisée signifie également moins de coûts associés à son traitement et à sa distribution.
+								</p>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col  d-none   d-lg-block ">
+						<div class="card">
+							<img src="../../assets/images/plante.png" class="card-img-top custom-image1" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title color">Plus de productivité</h5>
+								<p class="card-text ">
+									 En fournissant une irrigation juste à temps basée sur des prévisions précises, le système peut contribuer à améliorer les rendements des cultures en assurant des conditions optimales de croissance
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class=" col  d-none  d-lg-block ">
+						<div class="card">
+							<img src="../../assets/images/durabilite.jpg" class="card-img-top custom-image" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title color">Durabilité environnementale</h5>
+								<p class="card-text">
+									En réduisant la pression sur les ressources en eau et en minimisant les déchets associés à une irrigation excessive, le système contribue à la durabilité environnementale en préservant les ressources en eau pour les générations futures et en réduisant l'empreinte environnementale de l'agriculture.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+							
+		<section id="Contact" class="order-form py-5">
+			<div class="container ">
+				<h2 class="merriweather text-center text-light mb-4">Contactez-Nous</h2>
+				<form  [formGroup]="ContactForm">
+					<div class="row">
+						<div class="msn col-md-6  ">	
+							<div class="input-group mb-3">
+								<span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+									<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+									<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+								  </svg></span>
+								<input type="text" class="form-control" style="height: 80px;" formControlName="nom" required name="nom"  placeholder="Votre nom complet " />
+							</div>
+							<div  *ngIf="ContactForm.controls['nom'].invalid && ContactForm.controls['nom'].touched">
+                                <p style="color: red;" class="text-xs text-red-600">
+                                   votre nom est invalid !
+                                </p>
+                            </div>
+							<div class="input-group mb-3">
+								<span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+									<path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+									<path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+								  </svg></span>
+								<input type="text" class="form-control" style="height: 80px;" formControlName="email" required  name="email" placeholder="Votre Adresse Mail " />
+							</div>
+							<div  *ngIf="ContactForm.controls['email'].invalid && ContactForm.controls['email'].touched">
+                                <p style="color: red;" class="text-xs text-red-600">
+                                   votre email est invalid !
+                                </p>
+                            </div>
+							<div class="input-group mb-3">
+								<span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+									<path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+								  </svg></span>
+								<input id="telephone" type="text" class="form-control" style="height: 80px;" formControlName="telephone" required   name="telephone" placeholder="Votre Numéro de télephone " />
+							</div>
+							<div  *ngIf="ContactForm.controls['telephone'].invalid && ContactForm.controls['telephone'].touched">
+                                <p style="color: red;" class="text-xs text-red-600">
+                                   votre telephone est invalid !
+                                </p>
+                            </div>
+						</div>
+						<div class="bbc col-md-6 ">
+							<div class="groupe">
+								<label class="font text-light " style="margin-left: 20px ;margin-bottom: 10px;"  > Votre Message</label>
+								<textarea  type="text" class="form-control" style="height: 220px;" formControlName="message" required  name="message" placeholder="Saisissez ici..."></textarea>
+									
+
+							  </div>
+							  <div  *ngIf="ContactForm.controls['message'].invalid && ContactForm.controls['message'].touched">
+                                <p style="color: red;" class="text-xs text-red-600">
+                                   votre message est invalid !
+                                </p>
+                            </div>
+							
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="row justify-content-center">
+							<div class="col-auto  ">
+								<div *ngIf="message" [ngClass]="{'message': !active, 'message-success': active}">{{ message }}</div>
+								<button type="button" style="width: 200px; height: 60px;" [disabled]="ContactForm.invalid"class="btn btn-success color text-light" (click)="support()">Envoyer le message</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<section class="cc-footer py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 mb-4 col-sm">
+						<h6 class="redressed ps-3 fs-5">Smart Farm</h6>
+						<nav class="nav flex-column">
+							<a class="nav-link py-1 merriweather fs-6 text-secondary active" aria-current="page" href="#">LOGO</a>
+							
+						</nav>
+					</div>
+					<div class=" col-lg-3 col-md-6 mb-4 col-sm">
+						<h6 class="redressed ps-3 fs-5">Nos Partenaire</h6>
+						<nav class="nav flex-column">
+							<a class="nav-link py-1  merriweather fs-6 text-secondary active" aria-current="page" href="#">Partenaire 1</a>
+							<a class="nav-link py-1 mt-2 merriweather fs-6 text-secondary" href="#">Partenaire 2</a>
+							<a class="nav-link py-1 mt-2 merriweather fs-6 text-secondary" href="#">Partenaire 3</a>
+							
+							
+						</nav>
+					</div>
+					<div class=" col-lg-3 col-md-6 mb-4 col-sm">
+						<h6 class="redressed ps-3 fs-5">Réseaux Sociaux</h6>
+						<nav class="nav flex-column">
+							<a class="nav-link py-1  merriweather fs-6 text-secondary active" aria-current="page" href="#">
+								<img src="../../assets/images/Facebook.jpg" width="30" height="30" > Facebook</a>
+							<a class="nav-link py-1 mt-2 merriweather fs-6 text-secondary" href="#">
+								<img src="../../assets/images/insta.jpg" width="30" height="30" >Instagram</a>
+							<a class="nav-link py-1 mt-2 merriweather fs-6 text-secondary" href="#">
+								<img src="../../assets/images/linkedin.png" width="30" height="30" >LinkedIn</a>
+							
+							
+						</nav>
+					</div>
+					<div class="	 col-lg-3 col-md-6 mb-4 col-sm">
+						<h6 class="redressed ps-3 fs-5">Contact</h6>
+						<nav class="nav flex-column">
+							<a class="nav-link py-1 merriweather fs-6 text-secondary active" aria-current="page" href="#">
+								<img src="../../assets/images/tel.png" width="30" height="30" > (+216) 51486139 </a>
+							<a class="nav-link py-1 mt-4 merriweather fs-6 text-secondary" href="#">
+								<img src="../../assets/images/mail.png" width="30" height="30" > SmartFarm@gmail.com</a>
+							
+						</nav>
+					</div>
+					<div class="col-12 text-center py-4 text-muted">
+						&copy; Smart Farm 2024
+						
+						Copyright
+					</div>
+				</div>
+			</div>
+		</section>
+
+	
+	</body>
+</html>

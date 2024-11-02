@@ -1,0 +1,197 @@
+.logo{
+       
+	text-align: center;
+	width: 4rem; 
+	height: 4rem; 
+	border-radius: 50%;
+	padding: 0.313rem;
+	font-size: 20px;
+	font-weight: 900;
+	cursor: pointer;
+	border: none;
+	top: 3rem; /* Décalage vers le haut */
+left: 2rem;
+	
+	
+}
+
+.redressed {
+	font-family: 'Redressed', cursive;
+}
+.merriweather-light {
+	font-family: "Merriweather", serif;
+	font-weight: 300;
+	font-style: normal;
+  }
+.merriweather {
+	font-family: "Merriweather", serif;
+}
+
+.cc-navbar {
+	background-color: rgba(0, 0, 0, 0.55); /*couleur du navbar*/
+	font-family: 'Merriweather', serif;
+	box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.54);
+	z-index: 99;
+}
+
+.cc-navbar .nav-link {
+	border-bottom: 1px solid transparent;
+	transition: padding-bottom 0.4s ease-in-out, border-color 0.3s ease;
+}
+
+.cc-navbar .nav-link:hover {
+	padding-bottom: 20px;
+	border-bottom-color: var(--bs-teal);
+}
+
+.banner,
+.order-form {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/agriculture.jpg') center center fixed no-repeat;
+	background-size: cover;
+	height: 700px;
+}
+
+.order-form {
+	height: 500px;
+}
+
+.banner .banner-desc h1 {
+	font-size: 48px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.cc-menu {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/foret.jpg') center center fixed no-repeat;
+	background-size: cover;
+	height: 1200px;
+}
+
+.btn-order {
+	color: var(--bs-teal);
+	border-color: var(--bs-teal);
+	transition: 0.5s;
+}
+
+.btn-order:hover,
+.btn-order:focus,
+.btn-order:active {
+	color: #fff;
+	background-color: var(--bs-teal);
+}
+
+.color{
+	color: var(--bs-teal);
+	
+	display: inline-block;
+}
+.custom-image {
+	width:100%; 
+	height: 350px; 
+	object-fit: cover; 
+  }
+  .custom-image1{
+	height: 350px;
+
+  }
+  .font{
+	font-family: "Protest Revolution", sans-serif;
+	font-weight: 500;
+	font-style:normal;
+	background-color:var(--bs-teal);
+	font-size: 20px;
+
+  }
+  .message {
+    background-color: #ffffff; 
+    color: #f60303;
+    padding: 10px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    font-weight: bold; 
+}
+
+.message-success {
+    background-color: #ffffff; 
+    color: 	#607c3c; 
+    padding: 10px; 
+    border-radius: 5px;
+    font-size: 16px; 
+    font-weight: bold; 
+}
+
+@media (max-width: 485px) {
+    .mak , .man {
+        margin: 0 auto ;
+        width:100% !important; 
+       
+    }
+
+}
+
+  @media (min-width: 486px), (max-width: 776px) {
+	.man, .mak {
+		margin: 0 auto;
+		width:40%; 
+        max-width: none;
+		
+	 
+	}
+  }
+  
+  
+  @media (max-width: 777px), (max-width: 992px) {
+    .man, .mak {
+        margin: 0 auto;
+        width: 80%; 
+        max-width: none; 
+    }
+  
+    .row {
+        justify-content: center; 
+    }
+}
+@media (min-width: 390px), (max-width: 767px) {
+	.msn {
+		margin: 0 auto;
+		width:50%;
+        max-width: none;
+		
+	 
+	}
+	.bbc {
+		margin: 0 auto;
+		width:50%; 
+        max-width: none;
+		
+	 
+	}
+  }
+
+.logo{
+	text-align: center;
+	width: 4rem; 
+	height: 4rem; 
+	border-radius: 50%;
+	padding: 0.313rem;
+	font-size: 20px;
+	font-weight: 900;
+	cursor: pointer;
+	border: none;
+	top: 3rem; /* Décalage vers le haut */
+left: 2rem;
+}
+
+
+
+
+  
+ 
+
+
+
+
+
+
+
+  
