@@ -1,0 +1,14 @@
+spring:
+   data:
+    mongo:
+       username: root
+       password: example
+       host: localhost
+       port: 27017
+       database: mounir
+       authentication-database: admin
+       auto-index-creation: true
+
+
+server:
+  port: 8090
