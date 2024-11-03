@@ -7,4 +7,4 @@
 
 Both integrations are implemented using Flask API.
 
--the IOT Code folder contains the code that should be uploaded to the microcontroller after completing the wiring of all hardware components. 
+-The IOT Code folder contains the code that should be uploaded to the microcontroller after completing the wiring of all hardware components. 
