@@ -1,4 +1,4 @@
-In the machine learning folder, there  Python files:
+In the machine learning folder, there are Python files:
 
 1. model.py: This file contains the model for irrigation prediction.
 2. planteModel.py: This file is for the crop recommendation model.
