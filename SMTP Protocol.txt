@@ -6,3 +6,5 @@ spring.mail.username=bouchaalamounir9@gmail.com
 spring.mail.password=My personal Code
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
+
+Otherwise, I am currently using a Docker container named "Mailpit" for quick testing.
